@@ -1,0 +1,56 @@
+<?php
+session_start();
+$connection = mysqli_connect("localhost", "root", "", "platform");
+
+if (!$connection) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$user_id = $_SESSION['id'];
+$user_wallet = "1A2b3C4d5E6f7G8H9i0J"; // Replace with actual user wallet
+$recipient_wallet = "3FZbgi29cpjq2GjdwV8eyHuJJnkLtktZc5"; // Replace with actual recipient
+$amount_btc = 0.005;
+$status = "success"; // Or 'pending', 'failed'
+
+$sql = "INSERT INTO btc_transactions (user_id, user_wallet, recipient_wallet, amount_btc, status)
+        VALUES ('$user_id', '$user_wallet', '$recipient_wallet', '$amount_btc', '$status')";
+
+if (mysqli_query($connection, $sql)) {
+    echo "Transaction recorded successfully!";
+} else {
+    echo "Error: " . mysqli_error($connection);
+}
+
+mysqli_close($connection);
+?>
+
+
+<?php
+session_start();
+$connection = mysqli_connect("localhost", "root", "", "platform");
+$user_id = $_SESSION['id'];
+
+$query = mysqli_query($connection, "SELECT * FROM btc_transactions WHERE user_id = '$user_id' ORDER BY created_at DESC");
+?>
+
+<h3>Your BTC Transactions</h3>
+<table border="1">
+    <tr>
+        <th>User Wallet</th>
+        <th>Recipient Wallet</th>
+        <th>Amount (BTC)</th>
+        <th>Status</th>
+        <th>Time</th>
+    </tr>
+    <?php while ($tx = mysqli_fetch_assoc($query)) { ?>
+        <tr>
+            <td><?= htmlspecialchars($tx['user_wallet']) ?></td>
+            <td><?= htmlspecialchars($tx['recipient_wallet']) ?></td>
+            <td><?= $tx['amount_btc'] ?></td>
+            <td style="color: <?= $tx['status'] == 'success' ? 'green' : ($tx['status'] == 'failed' ? 'red' : 'orange') ?>">
+                <?= ucfirst($tx['status']) ?>
+            </td>
+            <td><?= $tx['created_at'] ?></td>
+        </tr>
+    <?php } ?>
+</table>

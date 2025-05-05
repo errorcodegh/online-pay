@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>first page loggins</title>
+	<link rel="stylesheet" href="loging.css">
+  <meta name="viewport" content="width=device-width, scalable=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  
+<body>
+  <div id="allforms">
+    <div id="myimage"><img src="click.jpg" id="im">
+
+    <div id="topflow">
+      <h3>Hello User!!</h3> <span class="auto-type"></span>
+    </div>
+
+    </div>
+
+  <div id="firstlog">
+    <form name="loggpage" method="POST" action="#">
+    <div class="typewriter"><h1>Welcome here!!</h1></div>
+      <div id="aveta"><i class="fa fa-user-circle" id="fa"></i></div>
+      <h3><i class="fa fa-whatsapp" id="whatsapp"></i></h3>
+      <h3></h3>
+      <label for="userName">UserName</label><br>
+      <input type="text" name="username" id="user" class="use" placeholder="Enter UserName"><i class="fa fa-user" id="una"></i><br>
+
+      <label for="passWord">PassWord</label><br>
+      <input type="text" name="password" id="pass" class="use" placeholder="Enter PassWord"><i class="fa fa-unlock-alt" id="lock"></i><br>
+
+      <legend>No account,Register Account&nbsp&nbsp&nbsp<input type="checkbox" id="ee" onclick="closepage()"></legend><br>
+
+       <input type="submit" name="submit" id="sub" value="SubMit">
+    </form>
+    </div>
+
+  </div>
+
+
+   <div id="register">
+      <form name="regist" method="POST" POST="logingpage.html" autocomplete="on">
+      <h2></h2>
+      <div id="aveta"><i class="fa fa-user-circle" id="fa"></i></div>
+       <i class="fa fa-times" id="close" onclick="closepage1()"></i>
+       <label for="username">Username</label><br>
+          <input type="text" name="uname" id="use1" class="us" placeholder="Enter name"><i class="fa fa-user" id="una1"></i><br>
+
+        <label for="phone">Phone</label><br>
+          <input type="text" name="phone" id="use1" class="us" placeholder="Phone number"><i class="fa fa-phone" id="una1"></i><br>
+
+        <label for="transaction_password">Transaction Password</label><br>
+        <input type="password" name="tr_pass" id="use1" class="us" placeholder="transaction key"><i class="fa fa-key" id="una1"></i><br>
+
+        <label for="password">Password</label><br>
+          <input type="password" name="pas" id="use1" class="us" placeholder="Password">
+          <i class="fa fa-unlock-alt" id="una1"></i><br>
+
+        <label for="confirm_password">Confirm Password</label><br>
+          <input type="text" name="conf" id="use1" class="us" placeholder="confirm Password"><i class="fa fa-unlock-alt" id="una1"></i><br>
+
+        <label for="Gender">Gender</label>
+        <input type="radio" name="rad" value="Female">Female
+        <input type="radio" name="rad" value="Male">Male<br>
+
+        <label for="invitation_code">Invitation code</label><br>
+
+        <input type="submit" name="subb" id="sub1" value="Submit">
+
+    </div>
+
+
+   
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+  var typed = new Typed('.auto-type', {
+        
+        strings: ['Lets help you with our digital platform', 'That pays daily', 'Get registered and earn'],
+        typeSpeed: 130,
+        backSpeed: 130,
+        loop: true,
+      });
+
+</script>
+
+<script>
+
+  function closepage(){
+  document.getElementById("firstlog").style.display="none";
+  document.getElementById("register").style.display="block";
+}
+
+function closepage1(){
+  document.getElementById("register").style.display="none";
+  document.getElementById("firstlog").style.display="block";
+}
+
+</script>
+
+	</body>
+	</html>

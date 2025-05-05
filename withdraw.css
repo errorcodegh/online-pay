@@ -1,0 +1,94 @@
+*{
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+html,body{background: whitesmoke;}
+
+h2,h3{opacity: 0.7; font-size: 1.1em;}
+
+#cls{position: absolute; right: 1em; top: 1em; font-size: 1.3em;}
+
+#form-container {
+    border-radius: 10px;
+    box-shadow: 0px 50px 30px rgba(0, 0, 0, 0.6);
+    width: 70%;
+    text-align: center;
+    line-height: 2.6em;
+    margin: 0 auto;
+    background: whitesmoke;
+    font-family: monospace;
+}
+
+#form-container input{
+    height: 3em;
+    width: 50%;
+    text-align: center;
+    border-right: 5px solid gold;
+  
+}
+
+#form-container label{
+    font-size: 1.2em;
+    font-weight: bold;
+    opacity: 0.7;
+}
+
+#withdraw-button{
+    background-color: gold;
+    padding: 1.5em;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+#withdraw-button:hover{background: cyan;}
+
+.input-with-button {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+}
+
+.input-with-button input {
+    width: 100%;
+    padding-right: 60px; /* Give space for the button inside */
+    height: 3em;
+    text-align: center;
+    border-right: 5px solid gold;
+}
+
+.inside-button {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70%;
+    padding: 0 10px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inside-button:hover {
+    background-color: #218838;
+}
+
+
+@media screen and (max-width: 480px){
+
+    #form-container{min-width: 88%; font-size: 1.3em;}
+    #form-container input{ width: 90%; font-size: 1.1em; }
+    #withdraw-button{font-size: 1.1em; padding:1.1em}
+
+#cls{position: absolute; font-size: 1.5em;}
+
+
+}

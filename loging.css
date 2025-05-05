@@ -1,0 +1,322 @@
+*{
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+	
+}
+
+body{
+	background-image: url("bk3.jpg");
+	
+}
+
+.error {color: white;}
+#ee {color: white; font-weight: bold;}
+
+@keyframes slideme{
+	from{ margin-left: -50%;}
+    to{width: 50%;}
+}
+
+#allforms{
+	width: 100vw;
+	display: flex;
+	
+}
+
+@keyframes slideme1{
+	from{ margin-right: -50%;}
+    to{width: 48%;}
+}
+
+#firstlog{
+	width: 48vw;
+	height: 100%;
+	background-image: url("bk3.jpg");
+	 box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+	text-align: center;
+	line-height: 3em;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	animation: 2s slideme1;
+
+}
+
+#myimage{ animation: 2s slideme;  }
+
+#im{
+	margin-top: 0em;
+	height: 99.1vh;
+	width: 52vw;
+	}
+
+#intro {
+	opacity: 0.7;
+	font-weight: bold;
+	background: cyan;
+}
+
+.use {
+	width: 25em;
+	height: 3em;
+	text-align: center;
+	border-bottom: 1px solid gold;
+
+}
+
+.use:hover{
+	font-size: 0.9em;
+}
+
+#sub:hover{
+	font-size: 1.4em;
+}
+
+label,legend {
+	opacity: 0.7;
+	font-weight: bold;
+}
+
+
+#sub {
+	font-weight: bold;
+	opacity: 0.7;
+	font-size: 1.2em;
+  
+}
+
+#fa{
+	border-radius: 50%;
+	font-size: 3em;
+	margin-top: 0.5em;
+}
+
+#lock{
+	position: relative;
+	right: 1.2em;
+
+}
+#una{
+	position: relative;
+	right: 1.2em;
+
+}
+
+#whatsapp{
+	font-size: 1.5em;
+	float: right;
+	position: relative;
+	top: -3em;
+	right: 1em;
+}
+
+
+#topflow{
+    position: absolute;
+	top: 5em;
+	z-index:1;
+	color: white;
+	font-size: 0.7em;
+	width: 48%;
+	font-family: monospace;
+
+}
+
+#topflow h3{
+    font-size: 4em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+
+.auto-type{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+
+
+}
+span{
+    color: white;
+    text-transform: capitalize;
+}
+
+
+.typewriter h1 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: typing 3s steps(30, end) infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+
+
+#register{
+    width: 48%;
+    height: 100vh;
+    background-image: url(bk3.jpg);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height:2.5em;
+    animation: 2s anima;
+    backdrop-filter: blur(20px);
+    display: none;
+  }
+
+  @keyframes anima{
+  	from{margin-top: -50%;}
+  	to{width: 48%;}
+  }
+
+  #fa{
+  border-radius: 50%;
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+#use1 {
+  width: 25em;
+  height: 2.3em;
+  text-align: center;
+  border-bottom: 1px solid gold;
+}
+
+#use1:hover{
+  font-size: 0.8em;
+}
+
+#sub1{
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1em;
+}
+
+#sub1:hover{
+  font-size: 1.2em;
+}
+
+label,legend {
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+#una1{
+  position: relative;
+  right: 1.2em;
+}
+
+#close{
+	position: relative;
+	top: 0px;
+	right: 12em;
+	font-size: 1.1em;
+}
+
+#error{ color: red; }
+
+
+@media screen and (max-width: 320px){
+	.use,#use1{ width: 15em;}
+
+#close{ 
+	position: relative;
+	top: 0px;
+	left: 5em;
+	font-size: 1.5em;
+}
+
+}
+
+@media screen and (max-width: 480px){
+
+#firstlog{
+    min-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 13em;
+}
+
+#im{
+	width: 100vw;
+	height: auto;
+	margin-top: 0px;
+
+}
+
+#topflow{
+	position: absolute;
+	top: 3em;
+	z-index:1;
+	font-size: 0.5em;
+	width: 100%;
+}
+
+label,legend{
+	display: block;
+	font-size: 1.5em;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+}
+
+
+
+#sub{
+	 margin: 0 auto;
+	display: block;
+	font-size: 1.5em;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#sub1{font-size: 1.5em;}
+
+.use{
+	font-size: 1em;
+	font-weight: bold;
+	height:3.2em;
+	width: 90%;
+
+}
+
+#register{
+	width: 100%;
+	height: auto;
+	animation: 2s anima;
+    position: relative;
+    font-size: 1em;
+}
+
+
+
+ @keyframes anima{
+  	from{margin-left: -100%;}
+  	to{width: 100%;}
+  }
+
+#close{
+	position: relative;
+	top: 0px;
+	right: 7em;
+	font-size: 1.5em;
+}
+
+
+}
+

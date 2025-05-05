@@ -1,0 +1,114 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+  #register{
+    width: 48%;
+    height: 100vh;
+    background-image: url(bk3.jpg);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 2.7em;
+    animation: 4s anima;
+  }
+
+    @keyframes anima{
+    from{margin-right: -50%;}
+    to{width: 48%;}
+  }
+
+  #fa{
+  border-radius: 50%;
+  font-size: 3em;
+  margin-top: 0px;
+}
+
+#use1 {
+  width: 25em;
+  height: 2.3em;
+  text-align: center;
+  border-bottom: 1px solid gold;
+}
+
+#use1:hover{
+  font-size: 0.8em;
+}
+
+#sub1{
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 1em;
+}
+
+#sub1:hover{
+  font-size: 1.2em;
+}
+
+label,legend {
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+#una1{
+  position: relative;
+  right: 1.2em;
+
+}
+
+#close{
+  position: relative;
+  top: 0px;
+  right: 15em;
+}
+
+
+
+
+</style>
+</head> 
+<body>
+
+ <div id="register">
+      <form name="regist" method="POST" POST="logingpage.html" autocomplete="on">
+      <h2></h2>
+      <div id="aveta"><i class="fa fa-user-circle" id="fa"></i></div>
+       <div onclick="closepage1()"><i class="fa fa-times" id="close"></i></div>
+       <label for="username">Username</label><br>
+          <input type="text" name="uname" id="use1" class="us" placeholder="Enter name"><i class="fa fa-user" id="una1"></i><br>
+
+        <label for="phone">Phone</label><br>
+          <input type="text" name="phone" id="use1" class="us" placeholder="Phone number"><i class="fa fa-phone" id="una1"></i><br>
+
+        <label for="transaction_password">Transaction Password</label><br>
+        <input type="password" name="tr_pass" id="use1" class="us" placeholder="transaction key"><i class="fa fa-key" id="una1"></i><br>
+
+        <label for="password">Password</label><br>
+          <input type="password" name="pas" id="use1" class="us" placeholder="Password">
+          <i class="fa fa-unlock-alt" id="una1"></i><br>
+
+        <label for="confirm_password">Confirm Password</label><br>
+          <input type="text" name="conf" id="use1" class="us" placeholder="confirm Password"><i class="fa fa-unlock-alt" id="una1"></i><br>
+
+        <label for="Gender">Gender</label>
+        <input type="radio" name="rad" value="Female">Female
+        <input type="radio" name="rad" value="Male">Male<br>
+
+        <label for="invitation_code">Invitation code</label><br>
+
+        <input type="submit" name="subb" id="sub1" value="Submit">
+
+    </div>
+
+  </form>
+</div>
+
+<script>
+function closepage1(){
+  document.getElementById("register").style.display="none";
+}
+</script>
+</body>
+</html>
